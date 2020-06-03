@@ -8,7 +8,7 @@ h1 {
   }
 }
 .privice_text {
-  height: 59px;//в макете немного видна вторая строка, могу сделать чтоб только первая была видна всё
+  height: 70px;//чтоб вторая строка была с хорошим затуханием
   text-align: center;
   @include text($colorText, 11px, 15px);
   opacity: 0.55;

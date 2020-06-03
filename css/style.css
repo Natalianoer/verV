@@ -163,7 +163,7 @@ h1 {
 
 /* line 10, ../sass/_text.scss */
 .privice_text {
-  height: 59px;
+  height: 70px;
   text-align: center;
   color: #333333;
   font-family: "SFProDisplay";
@@ -205,7 +205,7 @@ h1 {
   height: 70px;
   padding: 0 10px 0px 25px;
   border: solid 1px #ee334b;
-  border-radius: 20px;
+  border-radius: 40px;
   margin-bottom: 15px;
 }
 /* line 11, ../sass/_button.scss */
