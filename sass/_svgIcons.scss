@@ -1,0 +1,12 @@
+.svg_icons {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 14px;
+  right: 16px;
+  fill: #D1D1D6;
+  transition: all 0.5s ease-in;
+  &:hover {
+    fill: $colorRed;
+  }
+}

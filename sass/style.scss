@@ -1,0 +1,74 @@
+@import "compass/reset";
+
+$iphoneSe-height: 568px;
+$iphone8-height: 667px;
+$iphone8Plus-height: 736px;
+$iphoneX-height: 812px;
+
+$fontSan: "SFProDisplay";
+$colorText: #333333;
+$colorRed: #ee334b;
+
+@mixin iphoneSe {
+  @media (min-height: 0px) and (max-height: #{$iphoneSe-height}) {
+    @content;
+  }
+}
+@mixin iphone8 {
+  @media (min-height: #{$iphoneSe-height+1}) and (max-height: #{$iphone8-height}) {
+    @content;
+  }
+}
+@mixin iphone8Plus {
+  @media (min-height: $iphone8-height+1) and (max-height: #{$iphone8Plus-height}) {
+    @content;
+  }
+}
+@mixin iphoneX {
+  @media (min-height: $iphone8Plus-height+1) and (max-height: #{$iphoneX-height}) {
+    @content;
+  }
+}
+
+@mixin text($color: $colorText, $fontSize: 32px, $lineHeight: 33px) {
+  color: $color;
+  font-family: $fontSan;
+  font-size: $fontSize;
+  font-weight: 400;
+  line-height: $lineHeight;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+section {
+  width: 100%;
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.container {
+  width: 100%;
+  padding: 0 20px 20px;
+  .banner {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 30px);
+  }
+}
+
+@import "fonts";
+@import "svgIcons";
+@import "text";
+@import "button";
+@import "list_access";

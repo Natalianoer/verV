@@ -1,0 +1,44 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 0 10px 0px 25px;
+  border: solid 1px $colorRed;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &_save {
+    @include text($colorRed, 22px, 17px);
+    font-weight: 700;
+    @include iphoneSe {
+      font-size: 16px;
+    }
+  }
+  &_time {
+    @extend .button_save;
+    font-size: 14px;
+    font-weight: 400;
+    @include iphoneSe {
+      font-size: 12px;
+    }
+  }
+  &_trial {//a - так как предполагаю, что это будет ссылка а страницу
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 162px;
+    height: 41px;
+    background: linear-gradient(90deg, $colorRed, #e86878);
+    border-radius: 40px;
+    @include text(#fff, 12px, 17px);
+    text-decoration: none;
+    text-transform: uppercase;
+    @include iphoneSe {
+      width: 140px;
+    }
+  }
+}

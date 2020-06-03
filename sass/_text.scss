@@ -1,0 +1,34 @@
+h1 {
+  width: 100%;
+  text-align: center;
+  @include text($colorText, 34px, 45px);
+  margin-bottom: 25px;
+  @include iphoneSe {
+    @include text($colorText, 32px, 43px);
+  }
+}
+.privice_text {
+  height: 59px;//в макете немного видна вторая строка, могу сделать чтоб только первая была видна всё
+  text-align: center;
+  @include text($colorText, 11px, 15px);
+  opacity: 0.55;
+  // background: -webkit-gradient(linear, left bottom, left top, from($colorText), color-stop(#fff), to(#fff));
+  background: linear-gradient($colorText, #fff, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+  a {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:visited {
+      color: $colorText;
+      opacity: 0.5;
+    }
+  }
+}
+.scrollPrivate {
+  height: auto;
+  color: $colorText;
+  opacity: 0.55;
+}
